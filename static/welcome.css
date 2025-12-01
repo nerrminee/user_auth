@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome-container {
+    background: linear-gradient(135deg, #1e1e2e 0%, #292940 100%);
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid rgba(233, 69, 96, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.emoji {
+    font-size: 60px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+p {
+    font-size: 18px;
+    color: #b0b8cc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e94560 0%, #ff5a7a 100%);
+    color: #fff;
+    padding: 14px 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.2);
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #ff5a7a 0%, #e94560 100%);
+    box-shadow: 0 8px 25px rgba(233, 69, 96, 0.4);
+    transform: translateY(-3px);
+}
+
+.logout-btn:active {
+    transform: translateY(-1px);
+}
+
+.logout-btn:focus {
+    outline: 2px solid #e94560;
+    outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .welcome-container {
+        padding: 40px 25px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .emoji {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .logout-btn {
+        padding: 12px 35px;
+        font-size: 14px;
+    }
+}

@@ -16,19 +16,20 @@
         Login
         <span class="underline"></span>
       </button>
-      <form class="form login">
+      <form class="form login" method="POST">
+        {% csrf_token %}
         <fieldset>
           <legend>Please, enter your username and password for login.</legend>
           <div class="input-block">
             <label for="login-username">Username</label>
-            <input id="login-username" type="text" required>
+            <input id="login-username" type="text" name="login-username" required>
           </div>
           <div class="input-block">
             <label for="login-password">Password</label>
-            <input id="login-password" type="password" required>
+            <input id="login-password" type="password" name="login-password" required>
           </div>
         </fieldset>
-        <button type="submit" class="btn-login">Login</button>
+        <button type="submit" name="login" value="login" class="btn-login">Login</button>
       </form>
     </div>
     <div class="form-wrapper">
@@ -36,23 +37,37 @@
         Sign Up
         <span class="underline"></span>
       </button>
-      <form class="form signup">
+      <form class="form signup" method="POST">
+        {% csrf_token %}
         <fieldset>
           <legend>Please, enter your username, fullname and password for sign up.</legend>
+          {% if signup_form.errors %}
+            <div class="form-errors">
+              {% for field, errors in signup_form.errors.items %}
+                {% for error in errors %}
+                  <p class="error-message">{{ error }}</p>
+                {% endfor %}
+              {% endfor %}
+            </div>
+          {% endif %}
           <div class="input-block">
             <label for="signup-username">Username</label>
-            <input id="signup-username" type="text" required>
+            {{ signup_form.username }}
           </div>
           <div class="input-block">
             <label for="signup-fullname">Full Name</label>
-            <input id="signup-fullname" type="text" required>
+            {{ signup_form.full_name }}
           </div>
           <div class="input-block">
             <label for="signup-password">Password</label>
-            <input id="signup-password" type="password" required>
+            {{ signup_form.password1 }}
+          </div>
+          <div class="input-block">
+            <label for="signup-password-confirm">Confirm Password</label>
+            {{ signup_form.password2 }}
           </div>
         </fieldset>
-        <button type="submit" class="btn-signup">Continue</button>
+        <button type="submit" name="signup" value="signup" class="btn-signup">Continue</button>
       </form>
     </div>
   </div>
