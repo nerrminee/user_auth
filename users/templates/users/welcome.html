@@ -13,10 +13,16 @@
         <h1>Welcome, {{ user_name }}!</h1>
         <p>You have successfully logged in.</p>
         
-        <form method="POST" action="{% url 'logout' %}">
-            {% csrf_token %}
-            <button type="submit" class="logout-btn">Logout</button>
-        </form>
+        <div class="button-group">
+            <form method="POST" action="{% url 'logout' %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+            <form method="POST" action="{% url 'delete_account' %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete your account? This cannot be undone.');">Delete My Account</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

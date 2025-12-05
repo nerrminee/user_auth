@@ -67,6 +67,43 @@ p {
 	outline-offset: 2px;
 }
 
+.button-group {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.delete-btn {
+	background: linear-gradient(135deg, #e94560 0%, #ff5a7a 100%);
+	color: #fff;
+	border: none;
+	padding: 14px 50px;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.delete-btn:hover {
+	background: linear-gradient(135deg, #ff5a7a 0%, #e94560 100%);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(233, 69, 96, 0.5);
+}
+
+.delete-btn:active {
+	transform: translateY(-1px);
+}
+
+.delete-btn:focus {
+	outline: 2px solid #e94560;
+	outline-offset: 2px;
+}
+
 @media (max-width: 600px) {
 	.welcome-container {
 		padding: 40px 25px;

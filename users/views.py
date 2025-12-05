@@ -58,3 +58,20 @@ def logout_view(request):
     request.session.pop('user_name', None)
     messages.info(request, 'You have been logged out.')
     return redirect('home')
+
+
+@require_POST
+def delete_account(request):
+    user_id = request.session.get('user_id')
+    if not user_id:
+        return redirect('home')
+    try:
+        user = User.objects.get(id=user_id)
+        username = user.username
+        user.delete()
+        request.session.pop('user_id', None)
+        request.session.pop('user_name', None)
+        messages.success(request, f'Account {username} has been deleted.')
+    except User.DoesNotExist:
+        pass
+    return redirect('home')
