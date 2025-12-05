@@ -53,7 +53,6 @@ body {
 	color: #ffffff !important;
 }
 
-.message,
 .message * {
 	color: #ffffff !important;
 }
@@ -73,42 +72,36 @@ body {
 	background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
 	border-left: 4px solid #2e7d32;
 	box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-	color: #ffffff !important;
 }
 
 .message.success::before {
 	content: '✓';
 	font-weight: bold;
 	font-size: 18px;
-	color: #ffffff !important;
 }
 
 .message.error {
 	background: linear-gradient(135deg, #f44336 0%, #e53935 100%);
 	border-left: 4px solid #c62828;
 	box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
-	color: #ffffff !important;
 }
 
 .message.error::before {
 	content: '✕';
 	font-weight: bold;
 	font-size: 18px;
-	color: #ffffff !important;
 }
 
 .message.info {
 	background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
 	border-left: 4px solid #1565c0;
 	box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
-	color: #ffffff !important;
 }
 
 .message.info::before {
 	content: 'ℹ';
 	font-weight: bold;
 	font-size: 18px;
-	color: #ffffff !important;
 }
 
 .form-wrapper {

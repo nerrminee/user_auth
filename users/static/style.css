@@ -24,13 +24,11 @@ body {
 	color: #fff;
 }
 
-.messages {
-	width: 100%;
-	max-width: 500px;
-	margin: 0 auto 20px;
-}
+
 
 .message {
+	max-width: 500px;
+	margin: 0 auto 20px;
 	padding: 15px 20px;
 	margin-bottom: 12px;
 	border-radius: 5px;
