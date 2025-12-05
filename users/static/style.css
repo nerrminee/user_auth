@@ -24,6 +24,26 @@ body {
 	color: #fff;
 }
 
+.messages {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto 20px;
+}
+
+.message {
+	padding: 15px 20px;
+	margin-bottom: 12px;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	animation: slideInMessage 0.3s ease-out;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #ffffff !important;
+}
+
 .forms {
 	display: flex;
 	align-items: flex-start;

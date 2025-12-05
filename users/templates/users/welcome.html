@@ -20,7 +20,7 @@
             </form>
             <form method="POST" action="{% url 'delete_account' %}" style="display: inline;">
                 {% csrf_token %}
-                <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete your account? This cannot be undone.');">Delete My Account</button>
+                <button type="submit" class="logout-btn">Delete Account</button>
             </form>
         </div>
     </div>
