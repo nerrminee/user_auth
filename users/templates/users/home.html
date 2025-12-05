@@ -9,8 +9,15 @@
 </head>
 <body>
     <section class="main">
-  <h1 class="section-title">Animated Forms</h1>
+  <h1 class="section-title">Welcome to my first Dajngo project</h1>
   <div class="forms">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+          <p class="message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
     <div class="form-wrapper is-active">
       <button type="button" class="switcher switcher-login">
         Login

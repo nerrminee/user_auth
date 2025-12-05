@@ -10,8 +10,8 @@
 <body>
     <div class="welcome-container">
         <span class="emoji">🎉</span>
-        <h1>Welcome!</h1>
-        <p>You have successfully logged in</p>
+        <h1>Welcome, {{ user_name }}!</h1>
+        <p>You have successfully logged in.</p>
         
         <form method="POST" action="{% url 'logout' %}">
             {% csrf_token %}
